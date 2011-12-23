@@ -1,10 +1,5 @@
 Checkin::Application.routes.draw do
-  get "events/index"
-
-  get "events/new"
-
-  get "events/edit"
-
+  resources :events
   devise_for :users
 
   # The priority is based upon order of creation:
