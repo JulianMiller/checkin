@@ -5,8 +5,8 @@ class CreateEvents < ActiveRecord::Migration
       t.date :date
       t.time :time
       t.string :timezone
-      t.double :lat
-      t.double :lng
+      t.float :latitude
+      t.float :longitude
       t.string :message
       t.integer :user_id
 
