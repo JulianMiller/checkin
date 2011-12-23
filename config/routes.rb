@@ -1,4 +1,6 @@
 Checkin::Application.routes.draw do
+  get "home/index"
+
   resources :events
   devise_for :users
 
