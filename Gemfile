@@ -17,6 +17,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'rspec-rails', :group => [:development, :test]
 group :test do
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'guard-rspec'
   gem 'turn', :require => false
 end
