@@ -12,10 +12,7 @@
     = f.text_field :name
   .field
     = f.label :date
-    = f.date_select :date
-  .field
-    = f.label :time
-    = f.time_select :time, :ampm => true
+    = f.datetime_select :datetime, :ampm => true
   .field
     = f.label :time_zone
     = f.time_zone_select :timezone
