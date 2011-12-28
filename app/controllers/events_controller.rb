@@ -7,6 +7,12 @@ class EventsController < ApplicationController
     @event = current_user.events.new
   end
 
+  def checkin_page
+  end
+
+  def checkin
+  end
+
   def create
     @event = current_user.events.new(params[:event])
 
