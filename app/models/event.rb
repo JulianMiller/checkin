@@ -16,4 +16,9 @@ class Event < ActiveRecord::Base
     # Store the time in UTC
     self.datetime += offset.hours
   end
+
+  def self.find_by_time_and_location(time, params)
+    logger.debug time
+    logger.debug params
+  end
 end

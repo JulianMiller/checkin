@@ -11,6 +11,7 @@ class EventsController < ApplicationController
   end
 
   def checkin
+    @event = Event.find_by_time_and_location(Time.zone.now, params[:event])
   end
 
   def create
