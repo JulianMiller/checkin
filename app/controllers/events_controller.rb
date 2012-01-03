@@ -12,6 +12,10 @@ class EventsController < ApplicationController
 
   def checkin
     @event = Event.find_by_time_and_location(Time.zone.now, params[:event])
+
+    respond_to do |format|
+      format.json { render json: @event }
+    end
   end
 
   def create
