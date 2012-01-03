@@ -6,7 +6,7 @@ $(document).ready ->
   found_you = (data) ->
     console.log data
     data =
-      authenticity_token: $("meta[name]='csrf-token'")
+      authenticity_token: $("meta[name='csrf-token']")[0].content
       event:
         latitude:  data.coords.latitude
         longitude: data.coords.longitude
