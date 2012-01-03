@@ -25,3 +25,4 @@ $(document).ready ->
     navigator.geolocation.getCurrentPosition found_you, did_not_find,
       enableHighAccuracy: true
 
+  window.find_event = find_event
