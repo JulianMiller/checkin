@@ -2,4 +2,9 @@
   $(document).ready(function() {
     find_event();
   });
-Checking your location against current events... please wait.
+
+%p#please_wait Checking your location against current events... please wait.
+
+%p#not_found{:style => "display:none"} Sorry, we could not find an event that's currently taking place at your location.
+
+%p#event_found{:style => "display:none"} Event found...

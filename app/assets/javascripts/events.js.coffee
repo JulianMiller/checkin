@@ -11,11 +11,16 @@ $(document).ready ->
         latitude:  data.coords.latitude
         longitude: data.coords.longitude
 
-    $.post '/checkin.json', data, (post_result) ->
+    $.post('/checkin.json', data)
+    .success (post_result) ->
       console.log 'Event found!'
       console.log post_result
+      $("#event_found").show()
     .error () ->
       console.log 'Sorry, we could not find an event currently taking place at your location.'
+      $("#not_found").show()
+    .complete () ->
+      $("#please_wait").hide()
 
   did_not_find = (error) ->
     console.log error
