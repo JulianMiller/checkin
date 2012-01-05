@@ -1,5 +1,5 @@
 Checkin::Application.routes.draw do
-  resources :events
+  resources :events, :attendees
   devise_for :users
 
   get  "checkin" => "events#checkin_page"
