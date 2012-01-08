@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
   belongs_to :user
 
-  before_save :to_utc
+  before_save :to_utc, :create_end_datetime
 
   def to_utc
     # Set the timezone
@@ -15,6 +15,10 @@ class Event < ActiveRecord::Base
 
     # Store the time in UTC
     self.datetime += offset.hours
+  end
+
+  def create_end_datetime
+    self.end_datetime = datetime + 2.hours
   end
 
   def self.find_by_time_and_location(time, params)
