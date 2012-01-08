@@ -10,7 +10,7 @@ FactoryGirl.define do
     latitude      '33.000000'
     longitude     '-84.000000'
     message       'Message for an event'
-    datetime      DateTime.now(2000,1,1,1,0,0)
+    datetime      DateTime.new(2000,1,1,1,0,0)
     timezone      'EST'
     min_latitude  '32.999'
     max_latitude  '33.001'
