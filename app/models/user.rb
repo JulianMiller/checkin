@@ -8,4 +8,7 @@ class User < ActiveRecord::Base
   attr_accessible :username, :email, :password, :password_confirmation, :remember_me
 
   has_many :events, :dependent => :destroy
+
+  validates :username, :presence => true,
+                       :format => { :with => /^[a-zA-Z0-9]+$/ }
 end
