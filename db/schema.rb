@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120108025722) do
+ActiveRecord::Schema.define(:version => 20120108052755) do
 
   create_table "attendees", :force => true do |t|
     t.integer  "event_id"
@@ -31,6 +31,10 @@ ActiveRecord::Schema.define(:version => 20120108025722) do
     t.datetime "datetime"
     t.string   "timezone"
     t.datetime "end_datetime"
+    t.float    "min_latitude"
+    t.float    "max_latitude"
+    t.float    "min_longitude"
+    t.float    "max_longitude"
   end
 
   create_table "users", :force => true do |t|
