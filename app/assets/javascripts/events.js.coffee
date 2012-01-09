@@ -14,8 +14,7 @@ $(document).ready ->
     $.post('/checkin', data)
     .success (post_result) ->
       console.log 'Event found!'
-      console.log post_result
-      $("#event_found").show()
+      $("#event_found").parent().append(post_result)
     .error () ->
       console.log 'Sorry, we could not find an event currently taking place at your location.'
       $("#not_found").show()
