@@ -11,7 +11,7 @@ $(document).ready ->
         latitude:  data.coords.latitude
         longitude: data.coords.longitude
 
-    $.post('/checkin.json', data)
+    $.post('/checkin', data)
     .success (post_result) ->
       console.log 'Event found!'
       console.log post_result
