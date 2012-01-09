@@ -4,6 +4,8 @@ class Event < ActiveRecord::Base
   before_save :to_utc, :create_end_datetime, :add_bounds_to_locations
   
   validates :name, :presence => true
+  validates :latitude,  :presence => true
+  validates :longitude, :presence => true
 
   def to_utc
     # Set the timezone
