@@ -35,4 +35,12 @@ class Event < ActiveRecord::Base
   def self.find_by_time_and_location(time, params)
     self.where(["min_longitude <= ? AND max_longitude >= ? AND min_latitude <= ? AND max_latitude >= ? AND end_datetime > ? AND datetime < ?", params[:longitude], params[:longitude], params[:latitude], params[:latitude], time, time]).first
   end
+
+  def self.find_by_time(time)
+    self.where(["end_datetime > ? AND datetime < ?", time, time]).first
+  end
+
+  def self.find_by_location(params)
+    self.where(["min_longitude <= ? AND max_longitude >= ? AND min_latitude <= ? AND max_latitude >= ?", params[:longitude], params[:longitude], params[:latitude], params[:latitude]]).first
+  end
 end
