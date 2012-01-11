@@ -12,3 +12,23 @@ html {
   margin: 0 auto;
   width: 600px;
 }
+
+#header {
+  h1 {
+    float: left;
+  }
+
+  #nav {
+    float: right;
+    padding-top: 15px;
+
+    li {
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+}
+
+#content {
+  clear: both;
+}
