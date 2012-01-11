@@ -19,17 +19,30 @@ body {
 }
 
 #header {
+  padding-top: 20px;
+
   h1 {
     float: left;
   }
 
   #nav {
+    color: #222;
     float: right;
-    padding-top: 15px;
+    padding-top: 12px;
 
     li {
       display: inline-block;
       margin-left: 10px;
+
+      a {
+        color: #222;
+        border-bottom: 2px #8ceeff solid;
+      }
+
+      a:hover {
+        border-color: #ccf7ff;
+        text-decoration: none;
+      }
     }
   }
 }
