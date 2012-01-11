@@ -48,5 +48,24 @@ body {
 }
 
 #content {
+  h2 {
+    border-bottom: 2px solid #999;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+}
+
+#content {
   clear: both;
+}
+
+.event {
+  h3 {
+    line-height: normal;
+  }
+
+  p {
+    line-height: normal;
+    margin-bottom: 0;
+  }
 }

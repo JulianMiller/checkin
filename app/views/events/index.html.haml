@@ -1,11 +1,11 @@
-%h1 Events
+%h2 Events
 - @events.each do |event|
-  %p= event.name
-  %p= event.message
-  %p= event.datetime
-  %p= event.timezone
-  %p= event.latitude
-  %p= event.longitude
-  %p= event.user_id
+  .event
+    %h3= event.name
+    %p= event.datetime
+    %p= event.timezone
+    %p= event.latitude
+    %p= event.longitude
+    %p= event.message
 
 %p= link_to 'New event', new_event_path
