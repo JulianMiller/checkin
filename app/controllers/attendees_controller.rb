@@ -3,7 +3,8 @@ class AttendeesController < ApplicationController
   end
 
   def create
-    GiftMailer.send_gift(params[:email]).deliver
+    @attendee = Attendee.new(params[:attendee])
+    GiftMailer.send_gift(@attendee.email).deliver
     redirect_to root_path, notice: 'An email should be sent to you soon.'
   end
 end

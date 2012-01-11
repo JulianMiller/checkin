@@ -1,7 +1,5 @@
 class GiftMailer < ActionMailer::Base
-  default from: "develm2@gmail.com"
-
-  def send_gift(email)
-    mail(:to => email, :subject => "Test send")
+  def send_gift(to_email)
+    mail(:to => to_email, :from => "develm2@gmail.com", :subject => "Test send")
   end
 end
