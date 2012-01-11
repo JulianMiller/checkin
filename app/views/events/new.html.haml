@@ -1,4 +1,4 @@
-%h1 New Event 
+%h2 New Event 
 = form_for @event do |f|
   - if @event.errors.any?
     #error_explanation
@@ -10,7 +10,7 @@
   .field
     = f.label :name
     = f.text_field :name
-  .field
+  .field.date
     = f.label :date
     = f.datetime_select :datetime, :ampm => true
   .field

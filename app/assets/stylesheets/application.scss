@@ -76,6 +76,21 @@ body {
   }
 }
 
+form {
+  .field {
+    padding: {
+      bottom: 3px;
+      top: 3px;
+    }
+  }
+
+  .date {
+    select {
+      width: 85px;
+    }
+  }
+}
+
 #footer {
   color: #aaa;
   font-size: 8pt;
