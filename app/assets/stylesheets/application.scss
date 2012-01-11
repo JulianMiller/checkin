@@ -60,6 +60,12 @@ body {
 }
 
 .event {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom: 3px solid #ccc;
+  margin-bottom: 5px;
+  padding: 5px;
+
   h3 {
     line-height: normal;
   }
@@ -68,4 +74,10 @@ body {
     line-height: normal;
     margin-bottom: 0;
   }
+}
+
+#footer {
+  color: #aaa;
+  font-size: 8pt;
+  text-align: center;
 }
