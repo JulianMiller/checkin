@@ -21,6 +21,11 @@ class EventsController < ApplicationController
     end
   end
 
+  def gift
+    @event = Event.find_by_gift(params[:gift])
+    send_file @event.gift.url, :x_sendfile => true
+  end
+
   def create
     @event = current_user.events.new(params[:event])
 

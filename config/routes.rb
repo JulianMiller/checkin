@@ -8,5 +8,7 @@ Checkin::Application.routes.draw do
   get  "checkin" => "events#checkin_page"
   post "checkin" => "events#checkin"
 
+  get "gift/:gift" => "events#gift"
+
   root :to => "home#index"
 end
