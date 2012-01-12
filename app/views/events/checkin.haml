@@ -2,4 +2,5 @@ Please enter your email and we will send you your free stuff!
 = form_for @email do |f|
   = f.label :email
   = f.text_field :email
+  = f.hidden_field :event, :value => @event.id
   = f.submit

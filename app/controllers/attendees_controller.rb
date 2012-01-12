@@ -4,7 +4,8 @@ class AttendeesController < ApplicationController
 
   def create
     @attendee = Attendee.new(params[:attendee])
-    GiftMailer.send_gift(@attendee.email).deliver
+    @event = Event.find(@attendee.event_id)
+    GiftMailer.send_gift(@attendee.email, @event).deliver
     redirect_to root_path, notice: 'An email should be sent to you soon.'
   end
 end
