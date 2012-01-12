@@ -17,6 +17,12 @@
     = f.label :time_zone
     = f.time_zone_select :timezone
   .field
+    = f.label :venue
+    = f.text_field :venue
+  .field
+    = f.label :address
+    = f.text_field :address, :onblur => "geocode();"
+  .field
     = f.label :latitude
     = f.text_field :latitude
   .field
