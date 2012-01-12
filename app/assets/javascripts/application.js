@@ -8,14 +8,19 @@
 //= require jquery_ujs
 //= require_tree .
 
+var map;
+var geocoder;
+
 function initialize() {
+  geocoder = new google.maps.Geocoder();
+
   var myOptions = {
     zoom: 8,
     center: new google.maps.LatLng(33.748995, -84.387982),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   }
 
-  var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+  map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 }
 
 function loadScript() {
@@ -43,6 +48,8 @@ function geocode() {
         document.getElementById("event_longitude").value = marker.getPosition().lng();
         document.getElementById("event_latitude").value = marker.getPosition().lat();
       });
+    } else {
+      console.log("Something went wrong! " + status);
     }
   });
 }
