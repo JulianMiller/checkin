@@ -44,7 +44,7 @@ function geocode() {
       document.getElementById("event_longitude").value = results[0].geometry.location.lng();
       document.getElementById("event_latitude").value = results[0].geometry.location.lat();
 
-      google.maps.events.addListener(marker, "position_changed", function() {
+      google.maps.event.addListener(marker, "position_changed", function() {
         document.getElementById("event_longitude").value = marker.getPosition().lng();
         document.getElementById("event_latitude").value = marker.getPosition().lat();
       });
