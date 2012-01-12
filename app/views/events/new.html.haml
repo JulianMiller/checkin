@@ -23,16 +23,17 @@
     = f.label :address
     = f.text_field :address, :onblur => "geocode();"
   .field
-    = f.label :latitude
-    = f.text_field :latitude
-  .field
-    = f.label :longitude
-    = f.text_field :longitude
-  .field
     = f.label :message
     = f.text_field :message
-  .map_container
-    #map_canvas{:style => "height: 400px; width: 400px;"}
+  .hidden_fields
+    .map_container
+      #map_canvas{:style => "height: 400px; width: 400px;"}
+    .field
+      = f.label :latitude
+      = f.text_field :latitude
+    .field
+      = f.label :longitude
+      = f.text_field :longitude
 
   .actions
     = f.submit 'Save'
