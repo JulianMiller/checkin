@@ -1,6 +1,8 @@
 class Event < ActiveRecord::Base
   belongs_to :user
 
+  mount_uploader :gift, GiftUploader
+
   before_save :to_utc, :create_end_datetime, :add_bounds_to_locations
   
   validates :name, :presence => true
