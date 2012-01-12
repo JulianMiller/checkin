@@ -1,1 +1,4 @@
-= @event.message
+%p= @event.message
+
+%p --- To download the gift from the band click on this link:
+%p= url_for(:host => "checkin.tomelm.com", :controller => "events", :action => "gift", :gift => @event.gift.url)
