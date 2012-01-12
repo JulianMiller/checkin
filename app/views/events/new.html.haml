@@ -25,6 +25,8 @@
   .field
     = f.label :message
     = f.text_field :message
+  .map_container
+    #map_canvas{:style => "height: 400px; width: 400px;"}
 
   .actions
     = f.submit 'Save'
