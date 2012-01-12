@@ -77,6 +77,10 @@ body {
 }
 
 form {
+  label {
+    margin-right: 5px;
+  }
+
   .field {
     padding: {
       bottom: 3px;
@@ -86,12 +90,16 @@ form {
 
   .date {
     select {
-      width: 85px;
+      width: 80px;
     }
   }
 
   .hidden_fields {
     display: none;
+  }
+
+  .actions {
+    padding-left: 135px;
   }
 }
 
