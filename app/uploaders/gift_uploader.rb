@@ -24,4 +24,8 @@ class GiftUploader < CarrierWave::Uploader::Base
       "#{@name}.mp3"
     end
   end
+
+  def original_name
+    original_filename
+  end
 end

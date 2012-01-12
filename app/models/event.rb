@@ -3,7 +3,7 @@ class Event < ActiveRecord::Base
 
   mount_uploader :gift, GiftUploader
 
-  before_save :to_utc, :create_end_datetime, :add_bounds_to_locations
+  before_save :to_utc, :create_end_datetime, :add_bounds_to_locations, :save_original_file_name
   
   validates :name, :presence => true
   validates :venue, :presence => true
@@ -34,6 +34,10 @@ class Event < ActiveRecord::Base
     self.max_latitude  = latitude + 0.001
     self.min_longitude = longitude - 0.001
     self.max_longitude = longitude + 0.001
+  end
+
+  def original_file_name
+    self.gift_name = self.file.original_name
   end
 
   def self.find_by_time_and_location(time, params)
