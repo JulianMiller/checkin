@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120108052755) do
+ActiveRecord::Schema.define(:version => 20120112024036) do
 
   create_table "attendees", :force => true do |t|
     t.integer  "event_id"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(:version => 20120108052755) do
     t.float    "max_latitude"
     t.float    "min_longitude"
     t.float    "max_longitude"
+    t.string   "venue"
+    t.string   "address"
   end
 
   create_table "users", :force => true do |t|
