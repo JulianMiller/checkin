@@ -25,4 +25,26 @@ function loadScript() {
   document.body.appendChild(script);
 }
 
+function geocode() {
+  var address = document.getElementById("event_venue").value + ", " + document.getElementById("event_address").value;
+  geocoder.geocode({'address': address}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      map.setCenter(results[0].geometry.location);
+      marker = new google.maps.Marker({
+        draggable: true,
+        map: map,
+        position: results[0].geometry.location
+      });
+
+      document.getElementById("event_longitude").value = results[0].geometry.location.lng();
+      document.getElementById("event_latitude").value = results[0].geometry.location.lat();
+
+      google.maps.events.addListener(marker, "position_changed", function() {
+        document.getElementById("event_longitude").value = marker.getPosition().lng();
+        document.getElementById("event_latitude").value = marker.getPosition().lat();
+      });
+    }
+  });
+}
+
 window.onload = loadScript;
