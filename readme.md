@@ -28,3 +28,8 @@ Software used
 * Timezone configuration/coordination
 * Posting through AJAX
 
+External APIs
+-------------
+Checkin depends on Google Maps API for geocoding. The API in this application is not valid so make sure you get and use your own API key in app/assets/javascripts/application.js.
+
+You can get an API key for free from https://code.google.com/apis/console
