@@ -4,6 +4,8 @@ Checkin in an app inspired by Foursquare and Facebook's Location posts but with 
 
 There's more to it than just checking in at specific times. The creators of the event can add a message to display to the user and upload a song to give to the user when they check in. The message and file are emailed to the person who checked in as an incentive for doing so.
 
+The app is currently deployed at http://checkin.tomelm.com for anyone that want's to play around with it.
+
 Installation
 ------------
 First clone the repository
@@ -30,6 +32,6 @@ Software used
 
 External APIs
 -------------
-Checkin depends on Google Maps API for geocoding. The API in this application is not valid so make sure you get and use your own API key in app/assets/javascripts/application.js.
+Checkin depends on Google Maps API for geocoding. The API key in this application is not valid so make sure you get and use your own API key in app/assets/javascripts/application.js.
 
 You can get an API key for free from https://code.google.com/apis/console
